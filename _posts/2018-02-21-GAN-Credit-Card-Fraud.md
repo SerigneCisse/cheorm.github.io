@@ -1284,6 +1284,198 @@ WGAN, Final    | No       | 0.38                | 0.88             |161   |99   
 WGAN, Final    | Yes      | 0.16                | 0.88             |524   |100   |13    |70565 |0.50%     |0.85%
 
 
+<div style="overflow-x:auto;">
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table>
+    <thead>
+        <tr>
+            <th>Model</th>
+            <th>Restd.</th>
+            <th>Precision_fraud</th>
+            <th>Recall_fraud</th>
+            <th>FP</th>
+            <th>TP</th>
+            <th>FN</th>
+            <th>TN</th>
+            <th>Cost_L</th>
+            <th>Cost_U </th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Baseline</td>
+            <td>No</td>
+            <td>0.06</td>
+            <td>0.91</td>
+            <td>1584</td>
+            <td>103</td>
+            <td>10</td>
+            <td>69505</td>
+            <td>1.09%</td>
+            <td>2.03%</td>
+        </tr>
+        <tr>
+            <td>Grid. Baseline</td>
+            <td>No</td>
+            <td>0.83</td>
+            <td>0.75</td>
+            <td>18</td>
+            <td>85</td>
+            <td>28</td>
+            <td>71071</td>
+            <td>0.35%</td>
+            <td>0.40%</td>
+        </tr>
+        <tr>
+            <td>Rand. Ovrsmpl</td>
+            <td>No</td>
+            <td>0.04</td>
+            <td>0.91</td>
+            <td>2546</td>
+            <td>103</td>
+            <td>10</td>
+            <td>68543</td>
+            <td>1.65%</td>
+            <td>3.13%</td>
+        </tr>
+        <tr>
+            <td>SMOTE</td>
+            <td>No</td>
+            <td>0.01</td>
+            <td>0.92</td>
+            <td>7398</td>
+            <td>104</td>
+            <td>9</td>
+            <td>63691</td>
+            <td>4.47%</td>
+            <td>8.67%</td>
+        </tr>
+        <tr>
+            <td>SMOTE-TL</td>
+            <td>No</td>
+            <td>0.05</td>
+            <td>0.91</td>
+            <td>1883</td>
+            <td>103</td>
+            <td>10</td>
+            <td>69206</td>
+            <td>1.26%</td>
+            <td>2.37%</td>
+        </tr>
+        <tr>
+            <td>GAN, Steady</td>
+            <td>No</td>
+            <td>0.34</td>
+            <td>0.87</td>
+            <td>193</td>
+            <td>98</td>
+            <td>15</td>
+            <td>70896</td>
+            <td>0.32%</td>
+            <td>0.49%</td>
+        </tr>
+        <tr>
+            <td>GAN, Steady</td>
+            <td>Yes</td>
+            <td>0.14</td>
+            <td>0.89</td>
+            <td>621</td>
+            <td>101</td>
+            <td>12</td>
+            <td>70468</td>
+            <td>0.54%</td>
+            <td>0.95%</td>
+        </tr>
+        <tr>
+            <td>GAN, Final</td>
+            <td>No</td>
+            <td>0.34</td>
+            <td>0.88</td>
+            <td>194</td>
+            <td>99</td>
+            <td>14</td>
+            <td>70895</td>
+            <td>0.31%</td>
+            <td>0.48%</td>
+        </tr>
+        <tr>
+            <td>GAN, Final</td>
+            <td>Yes</td>
+            <td>0.06</td>
+            <td>0.88</td>
+            <td>1493</td>
+            <td>99</td>
+            <td>14</td>
+            <td>69596</td>
+            <td>1.07%</td>
+            <td>1.96%</td>
+        </tr>
+        <tr>
+            <td>WGAN, Steady</td>
+            <td>No</td>
+            <td>0.31</td>
+            <td>0.88</td>
+            <td>225</td>
+            <td>99</td>
+            <td>14</td>
+            <td>70864</td>
+            <td>0.33%</td>
+            <td>0.51%</td>
+        </tr>
+        <tr>
+            <td>WGAN, Steady</td>
+            <td>Yes</td>
+            <td>0.14</td>
+            <td>0.88</td>
+            <td>625</td>
+            <td>99</td>
+            <td>14</td>
+            <td>70464</td>
+            <td>0.57%</td>
+            <td>0.97%</td>
+        </tr>
+        <tr>
+            <td>WGAN, Final</td>
+            <td>No</td>
+            <td>0.38</td>
+            <td>0.88</td>
+            <td>161</td>
+            <td>99</td>
+            <td>14</td>
+            <td>70928</td>
+            <td>0.29%</td>
+            <td>0.44%</td>
+        </tr>
+        <tr>
+            <td>WGAN, Final</td>
+            <td>Yes</td>
+            <td>0.16</td>
+            <td>0.88</td>
+            <td>524</td>
+            <td>100</td>
+            <td>13</td>
+            <td>70565</td>
+            <td>0.50%</td>
+            <td>0.85%</td>
+        </tr>
+    </tbody>
+</table>
+</div>
+
+
+
 All in all, generative adversarial networks are very successful in learning the real data's distribution rather than duplicating the given data. While the recall on the minority-fraud class suffers relative to the random oversampling and SMOTE, this value is very small in absolute numbers. 
 
 Further, the precision of the classifiers using GAN generated data perform much better than the vanilla methods. This supports the possible idea that the reason why random oversample and SMOTE augmented data possess greater recall on frauds is due to the fact that the classifier applies a 'blanket cover' and is likelier to identify data as frauds (hence the poorer precison). In a simplistic sense, this is akin to defensive strategies - better to err on the side of caution.
