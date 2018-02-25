@@ -12,7 +12,7 @@ tags: Imbalanced SMOTE Random-Sampling Oversampling Deep-Learning Generative-Adv
 
 _21st Feb 2018_<br>
 _Cheo Rui Ming (SG)_<br>
-_Refer [here](https://github.com/CheoRM/cheorm.github.io/blob/master/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud-Walkthru.ipynb) for a detailed technical walkthrough and code._ For accompanying notes, refer to [here](https://github.com/CheoRM/cheorm.github.io/tree/master/accompanying_blog_notes/GAN_Credit_Card_Fraud).
+_Refer [here](https://github.com/CheoRM/cheorm.github.io/blob/master/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud-Walkthru.ipynb) for a detailed technical walkthrough and code. [For accompanying notes, refer here.](https://github.com/CheoRM/cheorm.github.io/tree/master/accompanying_blog_notes/GAN_Credit_Card_Fraud)_
 
 ---
 
