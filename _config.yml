@@ -16,7 +16,7 @@
 title: Data | Science
 description: > # this means to ignore newlines until "baseurl:"
   Material theme based on <a href="http://materializecss.com">Materialize.css</a> for jekyll sites
-baseurl: False
+baseurl: ""
 url: "https://cheorm.github.io"
 permalink: /:year/:month/:day/:title
 repository: CheoRM/cheorm.github.io
