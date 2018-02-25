@@ -690,7 +690,13 @@ A PCA plot was implemented to observe for the differences between fraudulent and
     explained variance ratio (first two components): [ 0.12503723  0.10004168]
 
 
-![png](https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_18_1.png){ width=50% }
+![png](https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_18_1.png){:class="img-responsive"}
+
+
+<img src="https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_18_1.png" width="50%" height="50%" />
+
+
+![png](https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_18_1.png)
 
 
 Clealy some form of distinction between fraud and non-fraud data exits. However, since the fraud data is a subset of the non-frauds (i.e. fraudulent clusters within the area of the non-fraud clusters), it will not be unexpected to find the precision of identifying fraud data to be exceptionally poor when maximising recall.
