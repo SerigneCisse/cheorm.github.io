@@ -3,8 +3,7 @@ layout: post
 title:  "GAN-Credit-Card-Fraud!"
 date:   2018-02-21 05:30:13 +0800
 categories: Default
-tags: GAN "Wasserstein GAN" Oversampling "Deep Learning"
-comments: 1
+tags: GAN "Wasserstein-GAN" Oversampling "Deep-Learning"
 ---
 
 # Generative Adversarial Networks in Credit Card Fraud Detection
