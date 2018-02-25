@@ -2,7 +2,7 @@
 layout: post
 title:  "Autoencoders & Data Augmentation"
 date:   2018-02-24 22:26:00 +0800
-categories: Deep Learning
+categories: Deep-Learning
 tags: Imbalanced Oversampling Data-Augmentation Deep-Learning Autoencoders
 ---
 
