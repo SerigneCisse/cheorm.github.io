@@ -696,22 +696,7 @@ Clealy some form of distinction between fraud and non-fraud data exits. However,
 
 
 ```python
-# Kernel Density Distribution subplots against target - 'Class'
-
-# Scatter subplots
-plt.figure(figsize=(20,32))
-for plot, feat in enumerate(X_cols):
-    
-    plt.subplot(8, 4, (plot+1))
-    title = 'Fraud/Non-Fraud & ' + feat
-    
-    # Normalise to visualise the differences in distributions
-    temp_df = pd.concat([X_train_df[[feat]], y_train_df], axis='columns')
-    temp_df.groupby(by='Class')[feat].plot(kind='kde', alpha=0.7, legend='best', lw=2.5)
-    plt.title(title)
-    plt.tight_layout(); plt.margins(0.02)
-    
-plt.show()    
+# Kernel Density Distribution subplots against target - 'Class'   
 ```
 
 
@@ -719,23 +704,7 @@ plt.show()
 
 
 ```python
-# Histogram Distribution subplots against target - 'Class'
-
-# Scatter subplots
-plt.figure(figsize=(20,32))
-for plot, feat in enumerate(X_cols):
-    
-    plt.subplot(8, 4, (plot+1))
-    title = 'Fraud/Non-Fraud & ' + feat
-    
-    # Normalise to visualise the differences in distributions
-    temp_df = pd.concat([X_train_df[[feat]], y_train_df], axis='columns')
-    temp_df.groupby(by='Class')[feat].plot(kind='hist', bins=100, alpha=0.7, 
-                                           legend='best', normed=True)
-    plt.title(title)
-    plt.tight_layout(); plt.margins(0.02)
-    
-plt.show()    
+# Histogram Distribution subplots against target - 'Class'  
 ```
 
 
@@ -751,7 +720,6 @@ For the sake of reaching a robust conclusion (on which features are important to
      'V11', 'V12', 'V14', 'V16', 'V17', 'V18', 'V19', 'V20', 'V21', 'V24', 'V25', 'V27', 'V28']
     Total number of features selected: 23
     
-
     Unselected features: ['V15', 'V23', 'V22', 'V26', 'V13', 'Amount']
     
 
@@ -764,14 +732,6 @@ The top 6 most correlated feature pairs, each feature selected by the Wilcoxon t
 
 ```python
 # Obtain the top 6 most wilcoxon-selected correlated variables' to observe their scatter pair plot relations
-
-# Check for high correlations
-wilcox_corr = X_train_df.drop(columns=['V15', 'Amount', 'V13', 'V26', 'V22', 'V23']).corr().abs()
-wilcox_corr_pdSr = wilcox_corr.unstack()
-wilcox_corr_pdSr_sort = wilcox_corr_pdSr.sort_values(ascending=False).to_frame()
-
-# Top 6 correlated variable pairs
-wilcox_corr_pdSr_sort.iloc[23:35:2, :].rename(index=str, columns={0:'pearson_rho'})
 ```
 
 
@@ -791,7 +751,7 @@ wilcox_corr_pdSr_sort.iloc[23:35:2, :].rename(index=str, columns={0:'pearson_rho
 </style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: right;">
+    <tr style="text-align: left;">
       <th></th>
       <th></th>
       <th>pearson_rho</th>
