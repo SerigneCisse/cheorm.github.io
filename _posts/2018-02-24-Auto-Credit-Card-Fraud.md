@@ -690,13 +690,7 @@ A PCA plot was implemented to observe for the differences between fraudulent and
     explained variance ratio (first two components): [ 0.12503723  0.10004168]
 
 
-![png](https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_18_1.png){:class="img-responsive"}
-
-
 <img src="https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_18_1.png" width="100%" height="100%" />
-
-
-![png](https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_18_1.png)
 
 
 Clealy some form of distinction between fraud and non-fraud data exits. However, since the fraud data is a subset of the non-frauds (i.e. fraudulent clusters within the area of the non-fraud clusters), it will not be unexpected to find the precision of identifying fraud data to be exceptionally poor when maximising recall.
@@ -722,7 +716,7 @@ plt.show()
 ```
 
 
-![png](https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_20_0.png)
+<img src="https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_20_0.png" width="100%" height="100%" />
 
 
 ```python
@@ -746,7 +740,7 @@ plt.show()
 ```
 
 
-![png](https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_21_0.png)
+<img src="https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_21_0.png" width="100%" height="100%" />
 
 
 Based on the distribution graphs above, it appears that for certain features, the distribution of fraudulent cases are different from non-fraudulent cases. However, the differences are difficult to make definitive judgements based on visual inspection.
@@ -839,8 +833,7 @@ wilcox_corr_pdSr_sort.iloc[23:35:2, :].rename(index=str, columns={0:'pearson_rho
 </div>
 
 
-
-![png](https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_27_0.png)
+<img src="https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_27_0.png" width="100%" height="100%" />
 
 
 #### Autoencoder Implementation of Data Augmentation
@@ -848,7 +841,7 @@ wilcox_corr_pdSr_sort.iloc[23:35:2, :].rename(index=str, columns={0:'pearson_rho
 A simple autoencoder network was implemented to generate data for augementing the dataset. With minimal tuning, it was executed for 6300 epochs. The epoch with the lowest MSE loss, frame of epochs with stabilised losses and the final epoch had their generated data retrieved for augmenting the training set's minority (fraud) class.
 
 
-![png](https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_33_0.png)
+<img src="https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_33_0.png" width="100%" height="100%" />
 
 
 It seems that after slightly less than 500 epochs, the autoencoder generating synthetic fraud transactions stabilised between 25-28 MSE loss values. No observable MSE loss deviations from this range were observed by the final epoch at 6300.
@@ -972,13 +965,13 @@ The scatter patterns were next plotted for the top 6 correlated feature pairs to
 corr_top6 = (('V5', 'V7'), ('V6', 'V5'), ('V7', 'V3'), ('V7', 'V6'), ('V2', 'V1'), ('V1', 'V7'))
 ```
 
-![png](https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_41_0.png)
+<img src="https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_41_0.png" width="100%" height="100%" />
 
-![png](https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_42_1.png)
+<img src="https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_42_1.png" width="100%" height="100%" />
 
-![png](https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_43_1.png)
+<img src="https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_43_1.png" width="100%" height="100%" />
 
-![png](https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_44_1.png)
+<img src="https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_44_1.png" width="100%" height="100%" />
 
 
 While the recall on fraudulent cases are very high, it makes no sense to augment data using autoencoders. Though no visible changes in the scatter relations were observed above _(the changes are exceptionally minor to the eye, enlarge the images to see these minor differences)_, the classification results show very high misclassification rates from the minimal to the final epoch generated data used. This suggests that the generated data is highly overfitting to the training set when an autoencoder is used and this method **should not be used to augment imbalanced datasets at all even if the data reflects a 'true' or stable posterior distribution**.
