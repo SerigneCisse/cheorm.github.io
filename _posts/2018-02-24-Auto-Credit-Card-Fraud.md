@@ -751,7 +751,7 @@ The top 6 most correlated feature pairs, each feature selected by the Wilcoxon t
 </style>
 <table border="1" class="dataframe">
   <thead>
-    <tr style="text-align: left;">
+    <tr style="text-align: right;">
       <th></th>
       <th></th>
       <th>pearson_rho</th>
