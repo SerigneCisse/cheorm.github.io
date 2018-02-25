@@ -26,10 +26,7 @@ paginate: 5
 github_profile: "https://github.com/CheoRM"
 user: "Rui Ming"
 user_email: "cheo.rui.ming@gmail.com"
-contact_url: ""
-google_tracking_id: ""
-google_site_verification: ""
-disqus_shortname: "matjek"
+contact_url: "google_form_link"
 
 # Build settings
 markdown: kramdown
