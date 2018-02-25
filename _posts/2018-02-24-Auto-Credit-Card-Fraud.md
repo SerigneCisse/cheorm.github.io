@@ -13,7 +13,7 @@ comments: 1
 
 _24th Feb 2018_<br>
 _Cheo Rui Ming (SG)_<br>
-_Refer [here](https://github.com/CheoRM/cheorm.github.io/tree/master/accompanying_blog_notes/Auto-Credit-Card-Fraud) for the accompanying notes. This blog is an extension of the [blog](https://cheorm.github.io/GAN-Credit-Card-Fraud) on the usage of GANs to augment data._<br>
+_Refer [here](https://github.com/CheoRM/cheorm.github.io/tree/master/accompanying_blog_notes/Auto-Credit-Card-Fraud) for the accompanying notes. This blog is an extension of the [blog](https://cheorm.github.io/2018/02/21/GAN-Credit-Card-Fraud) on the usage of GANs to augment data._<br>
 
 ---
 
