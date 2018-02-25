@@ -1,10 +1,9 @@
 ---
 layout: post
 title:  "Autoencoders & Data Augmentation"
-date:   2018-02-24 06:30:13 +0800
+date:   2018-02-24 22:26:00 +0800
 categories: Default
-tags: Autoencoder Upsampling
-comments: 1
+tags: Imbalanced Oversampling Data-Augmentation Deep-Learning Autoencoders
 ---
 
 ## Data Augmentation Using Autoencoder Generated Data
