@@ -1267,23 +1267,6 @@ Like the data augmentation patterns found in GAN, there is little or near insign
 #### The impact of augmenting data from GANs on the cost of frauds
 
 
-  Model        |  Restd.  |  Precision_fraud    |  Recall_fraud    |  FP  |  TP  |  FN  |  TN  |  Cost_L  |  Cost_U  
----------------|----------|---------------------|------------------|------|------|------|------|----------|----------
-Baseline       | No       | 0.06                | 0.91             |1584  |103   |10    |69505 |1.09%     |2.03%
-Grid. Baseline | No       | 0.83                | 0.75             |18    |85    |28    |71071 |0.35%     |0.40%
-Rand. Ovrsmpl  | No       | 0.04                | 0.91             |2546  |103   |10    |68543 |1.65%     |3.13%
-SMOTE          | No       | 0.01                | 0.92             |7398  |104   |9     |63691 |4.47%     |8.67%
-SMOTE-TL       | No       | 0.05                | 0.91             |1883  |103   |10    |69206 |1.26%     |2.37%
-GAN, Steady    | No       | 0.34                | 0.87             |193   |98    |15    |70896 |0.32%     |0.49%
-GAN, Steady    | Yes      | 0.14                | 0.89             |621   |101   |12    |70468 |0.54%     |0.95%
-GAN, Final     | No       | 0.34                | 0.88             |194   |99    |14    |70895 |0.31%     |0.48%
-GAN, Final     | Yes      | 0.06                | 0.88             |1493  |99    |14    |69596 |1.07%     |1.96%
-WGAN, Steady   | No       | 0.31                | 0.88             |225   |99    |14    |70864 |0.33%     |0.51%
-WGAN, Steady   | Yes      | 0.14                | 0.88             |625   |99    |14    |70464 |0.57%     |0.97%
-WGAN, Final    | No       | 0.38                | 0.88             |161   |99    |14    |70928 |0.29%     |0.44%
-WGAN, Final    | Yes      | 0.16                | 0.88             |524   |100   |13    |70565 |0.50%     |0.85%
-
-
 <div style="overflow-x:auto;">
 <style scoped>
     .dataframe tbody tr th:only-of-type {
