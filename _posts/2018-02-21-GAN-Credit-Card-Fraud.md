@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  "Handling Imbalanced Datasets - GANs vs. Convention"
-date:   2018-02-21 05:30:13 +0800
+title:  "Handling Imbalanced with GANs, Fraud Detection on Augmented Data"
+date:   2018-02-21 16:16:00 +0800
 categories: Default
-tags: GAN "Wasserstein-GAN" Oversampling "Deep-Learning"
+tags: Imbalanced SMOTE Random-Sampling Oversampling Deep-Learning Generative-Adversarial-Networks GAN Wasserstein-GAN 
 ---
 
 # Generative Adversarial Networks in Credit Card Fraud Detection
@@ -12,7 +12,7 @@ tags: GAN "Wasserstein-GAN" Oversampling "Deep-Learning"
 
 _21st Feb 2018_<br>
 _Cheo Rui Ming (SG)_<br>
-_Refer [here](https://github.com/CheoRM/cheorm.github.io/blob/master/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud-Walkthru.ipynb) for a detailed technical walkthrough and code_
+_Refer [here](https://github.com/CheoRM/cheorm.github.io/blob/master/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud-Walkthru.ipynb) for a detailed technical walkthrough and code._ For accompanying notes, refer to [here](https://github.com/CheoRM/cheorm.github.io/tree/master/accompanying_blog_notes/GAN_Credit_Card_Fraud).
 
 ---
 
