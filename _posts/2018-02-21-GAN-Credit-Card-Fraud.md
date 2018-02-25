@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "GAN-Credit-Card-Fraud!"
+title:  "Handling Imbalanced Datasets - GANs vs. Convention"
 date:   2018-02-21 05:30:13 +0800
 categories: Default
 tags: GAN "Wasserstein-GAN" Oversampling "Deep-Learning"
