@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Auto-Credit-Card-Fraud!"
+title:  "Autoencoders & Data Augmentation"
 date:   2018-02-24 06:30:13 +0800
 categories: Default
 tags: Autoencoder Upsampling
