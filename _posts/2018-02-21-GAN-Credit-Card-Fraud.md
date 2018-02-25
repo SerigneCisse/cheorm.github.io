@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Handling Imbalanced with GANs, Fraud Detection on Augmented Data"
+title:  "Handling Imbalanced Data with GANs, Fraud Detection on Augmented Data"
 date:   2018-02-21 16:16:00 +0800
 categories: Deep-Learning
 tags: Imbalanced SMOTE Random-Sampling Oversampling Deep-Learning Generative-Adversarial-Networks GAN Wasserstein-GAN 
