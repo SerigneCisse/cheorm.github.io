@@ -697,6 +697,9 @@ A PCA plot was implemented to observe for the differences between fraudulent and
 </div>
 
 
+<img align="left" src="https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_18_1.png" width="125" height="154" />
+
+
 ![png](https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_18_1.png)
 
 
