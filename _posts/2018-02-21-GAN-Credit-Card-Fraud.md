@@ -663,8 +663,7 @@ print('explained variance ratio (first two components): %s'
     explained variance ratio (first two components): [ 0.12503723  0.10004168]
     
 
-
-![png](https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_output_8_1.png)
+<img src="https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_output_8_1.png" width="100%" height="100%" />
 
 
 To illustrate the difficulty for any classifier to learn differences between classes in this dataset, the PCA plot of the first 2 components show that frauds (minority) are highly intersecting the area of the non-fraud (majority) clusters. Reducing the level of misclassification will not be an easy task since classification models can potentially identify non-frauds as malicious. There are hardly differences between both classes.
@@ -694,7 +693,7 @@ plt.show()
 ```
 
 
-![png](https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_output_10_0.png)
+<img src="https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_output_10_0.png" width="100%" height="100%" />
 
 
 It is fortunate to note that the distribution of fraudulent cases are quite different from non-fraudulent ones in some of the features. However, it would be too informal and presumptuous to make definitive judgements via visual inspections. For the sake of reaching a robust conclusion, equality of distribution tests were implemented. If there are little statistical differences between fraud and non-frauds for a particular feature, then this feature would be a poor predictor of fraud transactions.
@@ -725,10 +724,6 @@ print('Total number of features selected: {}'.format(len(wilcox_feat)))
 From the Wilcoxon tests, the null hypothesis for features 'V15', 'V22', 'V26', 'V13', 'V23' and 'Amount' fail to be rejected at 5% level - indicating that these features will not be useful in helping machine classifiers identify frauds.
 
 Following, the scatter relations for the top 6 most correlated selected features were observed as shown below to visualise how different these features are:
-
-
-
-
 
 
 <div style="overflow-x:auto;">
@@ -788,7 +783,7 @@ Following, the scatter relations for the top 6 most correlated selected features
 </div>
 
 
-![png](https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_output_15_0.png)
+<img src="https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_output_15_0.png" width="100%" height="100%" />
 
 
 Like the PCA plot in the overview section, fraudulent transactions are overlapping non-frauds heavily although (fortunately) not entirely. If the strategy is to upsample the minority class to assist algorithms in identifying frauds, it will not be unexpected to find high rates of misclassification in this dataset after the upsampling process.
@@ -995,9 +990,7 @@ Fortunately, results improved significantly when Tomek Linkages were used to rem
 The changes in the top 6 pairs of correlated features were additionally plotted below to visualise changes to the data's characteristics.
 
 
-
-
-![png](https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_output_33_0.png)
+<img src="https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_output_33_0.png" width="100%" height="100%" />
 
 
 From these diagrams, random uniform upsampling darkens spots with existing data while SMOTE techniques appear to generate additional noises. Resultantly, the scatter patterns are sharply altered relative to random upsampling. Unsurprisingly, data augmented with SMOTE fared the worst relative to the regular baseline while random oversampling being the second.
@@ -1023,7 +1016,9 @@ At each particular epoch of neural net training, the generator draws 'noises' fr
 
 Eventually, the generator learns to adjust the synthetic data's distribution to resemble more like the real data's distribution while the discriminator becomes more adept at adjusting the boundary which separates the differences between the generated data and the real data's distribution. 
 
-![png](https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_gan5.png) Source: https://ireneli.eu/2016/11/17/deep-learning-13-understanding-generative-adversarial-network/_
+
+<img src="https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_gan5.png" width="100%" height="100%" />
+Source: https://ireneli.eu/2016/11/17/deep-learning-13-understanding-generative-adversarial-network/_
 
 The figure above illustrates how the adversarial network functions. The discriminator's decision boundary function is indicated with blue dotted lines, black dotted lines for the real data's probability density function _(pdf)_ and the generated data's pdf by green lines.
 
@@ -1057,9 +1052,7 @@ Since GANs are notoriously difficult to train, a few pointers were integrated to
 Since there were 6300 fits in the gridsearched baseline, the GAN was trained for 6300 epochs correspondingly. At each epoch, 5000 synthetic datapoints were generated. However, not all generated data is used, only the epoch deemed suitable has its generated data used in augmentation.
 
 
-
-
-![png](https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_output_39_0.png)
+<img src="https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_output_39_0.png" width="100%" height="100%" />
 
 
 Interestingly, the losses of the generator rises over epochs while decreases in the discriminator. This could suggest that the discriminator increasingly overpowers the generator over epochs. However, this is a good problem in the sense where the generator is forced to repeatedly generate new variants of synthetic data (thereby exploring more thoroughly the characteristics of the real data's distributions) to fool the discriminator.
@@ -1160,9 +1153,7 @@ Suppose sieving out for fraudulent cases is a priority, the GAN architecture is 
 The scatter relations of the top 6 correlated features were next plotted to visualise changes.
 
 
-
-
-![png](https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_output_47_0.png)
+<img src="https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_output_47_0.png" width="100%" height="100%" />
 
 
 Effectively, there is little distinction between the pre-augmented training data and the various augmented training set types. Observing close enough, certain areas in the augmented data appears more concentrated but not substantially. This could also be due to augmenting the minority class with just 5000 additional generated datapoints against a total of 213,605 transaction observations in the training set.
@@ -1178,9 +1169,7 @@ To impose the Lipschitz constraint onto the discriminator, the weights of this n
 In the following, the Wasserstein GAN was implemented with slight modifications. In the original implementation, the loss function utilises a root mean-squared error optimisation to both the generator and discriminator's loss functions. However, the adam and stochastic gradient descent optimiser were respectively implemented instead. In addition, the clipping range was modified to between +/-0.05 as opposed to the original +/-0.01 used. Results showed improvements in misclassifications relative to the classical GAN although not dramatically.
 
 
-
-
-![png](https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_output_49_0.png)
+<img src="https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_output_49_0.png" width="100%" height="100%" />
 
 
 When the Lipschitz constraint was imposed, the generator's losses became significantly stable over epochs. This is good as it potentially signals the generator being given the opportunity to learn the real data's distribution more thoroughly and continuosly, avoiding a case of mode collapse. Had mode collapse occured, the generator's loss would have plunged signficantly downwards, or worse, occuring at a very early epoch.
@@ -1268,8 +1257,7 @@ Through these, results suggest that the classical GAN models possibly require mo
 
 
 
-
-![png](https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_output_56_0.png)
+<img src="https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_output_56_0.png" width="100%" height="100%" />
 
 
 Like the data augmentation patterns found in GAN, there is little or near insignificant differences from the pre-augmented training set. Both the GAN and WGAN architectures prove capable of learning the real data's underlying distributions well or do not distort real data distributions when augmented with generated data at the very least.
