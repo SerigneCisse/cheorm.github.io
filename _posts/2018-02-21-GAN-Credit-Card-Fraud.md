@@ -6,7 +6,7 @@ categories: Deep-Learning
 tags: Imbalanced SMOTE Random-Sampling Oversampling Deep-Learning Generative-Adversarial-Networks GAN Wasserstein-GAN 
 ---
 
-# Generative Adversarial Networks in Credit Card Fraud Detection
+## Generative Adversarial Networks in Credit Card Fraud Detection
 
 ---
 
