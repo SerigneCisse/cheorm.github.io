@@ -621,7 +621,7 @@ credit.describe(include='all')
 
 In it, it consists of 31 columns. Features 'V1' through 'V28' were obtained via a PCA-transformation of original features to anonymise the data. In the following sections, 'Amount' will have to be standardised later as well to ensure consistency in the data.
 
-Since the maximum value of 'Time' is 172,792 seconds from the first transaction of the dataset, we know that the data covers 2 days worth of transactions.
+Since the maximum value of 'Time' is 172,792 seconds from the first transaction of the dataset, we know that the data covers 2 days' worth of transactions.
 
 In addition, the number of frauds in the dataset is only a **mere 0.172% out of 284,807 transaction entries!**
 
@@ -637,7 +637,7 @@ print(credit['Class'].value_counts(), '\n')
     
     
 
-It seems there are only 492 fradulent transactions! It is highly probable that the classifier would fail to learn how to identify frauds since there are only so few data points available to observe for differences from normal transactions.
+It seems there are only 492 fraudulent transactions! It is highly probable that the classifier would fail to learn how to identify frauds since there are only so few data points available to observe for differences from normal transactions.
 
 The total amount of fraudulent transactions was next computed for the purpose of cost computations of model implementation later. In total, the monetary transactions in frauds summed to \$42,513.46 and \$17,614.51 in the training and test sets respectively. Therefore, this figure totals to \$102,032.30 for the entire dataset.
 
@@ -807,7 +807,7 @@ _A few assumptions defined to aid in the cost computations_:<br>
 
 \[4] [Every dollar of fraud costs $2.40 to the business](https://www.lexisnexis.com/risk/downloads/assets/true-cost-fraud-2016.pdf). With 492 instances of fraud transactions amounting to \$102,032.30, the average cost per case of fraud is taken as \$293.31.
 
-\[5] Since it costs \$2.40 per dollar of fraud and 1.47% of business revenue, the revenue for the instituion which provided this dataset is reversed calculated, holding the assumptions above true.
+\[5] Since it costs \$2.40 per dollar of fraud and 1.47% of business revenue, the revenue for the institution which provided this dataset is reversed calculated, holding the assumptions above true.
 
 \[6] For any model, it is the only line of defence against fraud prevention.
 
@@ -962,7 +962,7 @@ SMOTE was next being implemented to upsample the minority (fraud) class' observa
 
 Via SMOTE, the degree of misclassification worsens from the previous. For a relatively similar level of recall on the minority class, misclassification rose by almost 5000 observations. The cost has now risen to between 4.47-8.67%!
 
-This increment in misclassification is similar to the number of synthetic data points inserted into the training set. This may not be conincidental since SMOTE potentially distorts the underlying feature distributions of the minority class such that these synthetic datapoints no longer resemble the true data adequately for accurate classification.
+This increment in misclassification is similar to the number of synthetic data points inserted into the training set. This may not be coincidental since SMOTE potentially distorts the underlying feature distributions of the minority class such that these synthetic datapoints no longer resemble the true data adequately for accurate classification.
 
 #### Augmented Model: SMOTE + Tomek Linkages, Overlap Removal
 
@@ -1012,7 +1012,7 @@ _**Why GANs in data augmentation**_<br>
 
 First proposed by [Ian Goodfellow and colleagues](https://arxiv.org/abs/1406.2661), the vanilla GANs' implementation comprises of two networks, the generator and discriminator, which compete against each other in a min-max optimisation process. The highly used case example would be counterfeiting banknotes. The generator is the counterfeiter while the discriminator is the investigator trying to figure out whether the banknotes synthesized by the generator are authentic. Both network receives feedback from each other and improve in reproducing near genuine banknotes and being a better investigator over time.
 
-At each particular epoch of neural net training, the generator draws 'noises' from a prior distribution. As it receives feedback from the discriminator in progressive epochs, the generator learns to map this prior distribution to the true (if not the posterior) distribution of the data inputed better.
+At each particular epoch of neural net training, the generator draws 'noises' from a prior distribution. As it receives feedback from the discriminator in progressive epochs, the generator learns to map this prior distribution to the true (if not the posterior) distribution of the data inputted better.
 
 Eventually, the generator learns to adjust the synthetic data's distribution to resemble more like the real data's distribution while the discriminator becomes more adept at adjusting the boundary which separates the differences between the generated data and the real data's distribution. 
 
@@ -1026,7 +1026,7 @@ From panel (a) to (b), the discriminator learns to differentiate real and genera
 
 From panel (b) to (c), upon receiving this feedback, the generator then knows that it has to adjust the generated data's distribution such that they lie as far to the left of the blue sigmoid curve. The generator next aims to map the prior values closer to the left of the decision boundary, approximating to the real data's distribution (black dotted) during this process.
 
-After multiple epochs, the theoretical optimum is reached when both the generated and real data's distributions are identical, depicted in panel (d). At this juncture, the blue dotted curve is now a horizontal line (which is 0.5), which shows that the discriminator can no longer differentiate the autheticity of the data. For some data drawn, the discriminator has a probability of 0.5 to identify the data incorrectly. That is, there is no difference from a guess whether the data is real or generated.
+After multiple epochs, the theoretical optimum is reached when both the generated and real data's distributions are identical, depicted in panel (d). At this juncture, the blue dotted curve is now a horizontal line (which is 0.5), which shows that the discriminator can no longer differentiate the authenticity of the data. For some data drawn, the discriminator has a probability of 0.5 to identify the data incorrectly. That is, there is no difference from a guess whether the data is real or generated.
 
 #### Caveats of Training GANs
 
@@ -1038,7 +1038,7 @@ When that happens, the generator is no longer capable of generating synthetic da
 
 #### Altogether, why GANs make sense now
 
-Using GANs, data generated from thes networks theoretically have the properties of the real data's characteristics. This provides a more robust method of generating artificial samples than to add random noises (SMOTE) which there is less control over the changes in the features' distributions as well as preventing an overfit to the training set (random uniform oversampling).
+Using GANs, data generated from these networks theoretically have the properties of the real data's characteristics. This provides a more robust method of generating artificial samples than to add random noises (SMOTE) which there is less control over the changes in the features' distributions as well as preventing an overfit to the training set (random uniform oversampling).
 
 The important thing is that if the GAN is capable of learning the posterior distribution of the real data, then the likelihood of overfitting is reduced. Augmenting the minority class(es) of imbalanced datasets will be a proportional scaling of the features' distributions.
 
@@ -1144,7 +1144,7 @@ Though still below the benchmarked 1.47% cost of frauds (as a percentage of reve
     
     
 
-Generally, a training set augmented with GAN generated data produced substantial improvements in the result. Essentially, the classifier is able to detect fradulent transactions better. Though the precision in detecting frauds suffers, it does not degrade dramatically. A missclassification of approximately 200 benign transactions is decent.
+Generally, a training set augmented with GAN generated data produced substantial improvements in the result. Essentially, the classifier is able to detect fraudulent transactions better. Though the precision in detecting frauds suffers, it does not degrade dramatically. A misclassification of approximately 200 benign transactions is decent.
 
 Using the best performing model (data augmentation using generated samples from the final epoch), the cost computes to between 0.31-0.48%. While not as well as the gridsearched baseline (0.35-0.40%) at the upper cost boundary, the model outperforms in terms of the recall on fraudulent cases at 0.88 compared to the gridsearched's recall of 0.75.
 
@@ -1172,7 +1172,7 @@ In the following, the Wasserstein GAN was implemented with slight modifications.
 <img src="https://cheorm.github.io/accompanying_blog_notes/GAN_Credit_Card_Fraud/GAN-Credit-Card-Fraud_output_49_0.png" width="100%" height="100%" />
 
 
-When the Lipschitz constraint was imposed, the generator's losses became significantly stable over epochs. This is good as it potentially signals the generator being given the opportunity to learn the real data's distribution more thoroughly and continuosly, avoiding a case of mode collapse. Had mode collapse occured, the generator's loss would have plunged signficantly downwards, or worse, occuring at a very early epoch.
+When the Lipschitz constraint was imposed, the generator's losses became significantly stable over epochs. This is good as it potentially signals the generator being given the opportunity to learn the real data's distribution more thoroughly and continuously, avoiding a case of mode collapse. Had mode collapse occurred, the generator's loss would have plunged significantly downwards, or worse, occurring at a very early epoch.
 
 Like the standards set in the GAN implementation, the stable frame is found when 5% of the epochs' losses stabilise within +/-75% of 1 standard deviation from the median loss value.
 
@@ -1253,7 +1253,7 @@ It appears that the discriminator stabilises around the 1665th epoch while the g
 
 With the results from augmenting data created by WGANs, the steady unstandardised WGAN yield a cost range between 0.33-0.51% while at the final unstandardised epoch, this cost ranges between 0.29-0.44%. Replicating this motif in the vanilla GAN unstandardised models, the steady and final epoch cost ranges are between 0.32-0.49% and 0.31-0.48%.
 
-Through these, results suggest that the classical GAN models possibly require more training epochs before reaching the optimum. Comparing against WGAN, the results substantially improves from the steady to the final epoch by the time the final training epoch is ran. In addition, the precision of WGAN augmented data models appear to be higher than GAN models where the lowest recorded precison for WGAN was at 0.14 while 0.04 in GAN. This serves as an additional piece of evidence suggesting that WGAN would generally be a better architecture over its predecessor.
+Through these, results suggest that the classical GAN models possibly require more training epochs before reaching the optimum. Comparing against WGAN, the results substantially improves from the steady to the final epoch by the time the final training epoch is ran. In addition, the precision of WGAN augmented data models appear to be higher than GAN models where the lowest recorded precision for WGAN was at 0.14 while 0.04 in GAN. This serves as an additional piece of evidence suggesting that WGAN would generally be a better architecture over its predecessor.
 
 
 
@@ -1461,13 +1461,13 @@ Like the data augmentation patterns found in GAN, there is little or near insign
 
 All in all, generative adversarial networks are very successful in learning the real data's distribution rather than duplicating the given data. While the recall on the minority-fraud class suffers relative to the random oversampling and SMOTE, this value is very small in absolute numbers. 
 
-Further, the precision of the classifiers using GAN generated data perform much better than the vanilla methods. This supports the possible idea that the reason why random oversample and SMOTE augmented data possess greater recall on frauds is due to the fact that the classifier applies a 'blanket cover' and is likelier to identify data as frauds (hence the poorer precison). In a simplistic sense, this is akin to defensive strategies - better to err on the side of caution.
+Further, the precision of the classifiers using GAN generated data perform much better than the vanilla methods. This supports the possible idea that the reason why random oversample and SMOTE augmented data possess greater recall on frauds is due to the fact that the classifier applies a 'blanket cover' and is likelier to identify data as frauds (hence the poorer precision). In a simplistic sense, this is akin to defensive strategies - better to err on the side of caution.
 
 However, being defensive is not necessarily the optimal choice to businesses. The cost of managing frauds scales together with an increased amount of falsely identified transactions as frauds. In the accompanying [notes](https://github.com/CheoRM/cheorm.github.io/tree/master/accompanying_blog_notes/GAN_Credit_Card_Fraud), the cost calculations show that when methods with higher rates of misclassifications are implemented, the costs of manual reviews become correspondingly larger such that it becomes an irrational business decision to implement these models.
 
 #### Concluding points
 
-The purpose of chosing GANs to augment data was fundamentally bourne out of the consideration on preventing overfitting to the training sets as well as avoiding overfitted classifers on the test set via gridsearching. Moreover, while not an extensive array of non-GAN data augementation methods were explored, the GAN/WGAN results above showed that time could potentially be saved from gridsearching as well as searching for the method that augments data well.
+The purpose of choosing GANs to augment data was fundamentally borne out of the consideration on preventing overfitting to the training sets as well as avoiding overfitted classifiers on the test set via gridsearching. Moreover, while not an extensive array of non-GAN data augementation methods were explored, the GAN/WGAN results above showed that time could potentially be saved from gridsearching as well as searching for the method that augments data well.
 
 Since every dataset is unique, so will the sampling methods likely be changed. Instead of researching for the right classical approach all over, GANs reduce this search effort by primarily learning the distribution of the data and generate samples out of it without incurring the possibility of combinatorial explosion (when gridsearching) or misrepresenting the real minority class(es) feature distributions/scatter patterns during the sampling process. When considering a GAN architecture, the WGAN is the better choice among the two GAN systems explored here for its faster convergence to the global optimum while less susceptible to mode collapsing.
 
