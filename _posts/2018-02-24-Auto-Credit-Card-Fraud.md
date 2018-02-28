@@ -658,7 +658,7 @@ credit['Class'].value_counts()
     Name: Class, dtype: int64
     
 
-As defined from source: 'Time' is the seconds elapsed between each transaction and the first transaction in the dataset. The last transaction was 172,792 seconds after the first was made. This computes to approximately 2 days worth of transaction data.
+As defined from source: 'Time' is the seconds elapsed between each transaction and the first transaction in the dataset. The last transaction was 172,792 seconds after the first was made. This computes to approximately 2 days' worth of transaction data.
 
 In this case, it is unknown during what time of the day the transactions actually began. Then, it is not possible to say that the first data point of 'Time' value == 0 imply transactions began at midnight. The column can at most inform us how close the transactions were made in between 2 fraudulent ones.
 
