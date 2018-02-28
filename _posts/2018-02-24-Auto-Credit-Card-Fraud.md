@@ -797,7 +797,7 @@ The top 6 most correlated feature pairs, each feature selected by the Wilcoxon t
 
 #### Autoencoder Implementation of Data Augmentation
 
-A simple autoencoder network was implemented to generate data for augementing the dataset. With minimal tuning, it was executed for 6300 epochs. The epoch with the lowest MSE loss, frame of epochs with stabilised losses and the final epoch had their generated data retrieved for augmenting the training set's minority (fraud) class.
+A simple autoencoder network was implemented to generate data for augmenting the dataset. With minimal tuning, it was executed for 6300 epochs. The epoch with the lowest MSE loss, frame of epochs with stabilised losses and the final epoch had their generated data retrieved for augmenting the training set's minority (fraud) class.
 
 
 <img src="https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_33_0.png" width="100%" height="100%" />
