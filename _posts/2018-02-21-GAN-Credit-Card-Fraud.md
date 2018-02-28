@@ -1467,7 +1467,7 @@ However, being defensive is not necessarily the optimal choice to businesses. Th
 
 #### Concluding points
 
-The purpose of choosing GANs to augment data was fundamentally borne out of the consideration on preventing overfitting to the training sets as well as avoiding overfitted classifiers on the test set via gridsearching. Moreover, while not an extensive array of non-GAN data augementation methods were explored, the GAN/WGAN results above showed that time could potentially be saved from gridsearching as well as searching for the method that augments data well.
+The purpose of choosing GANs to augment data was fundamentally borne out of the consideration on preventing overfitting to the training sets as well as avoiding overfitted classifiers on the test set via gridsearching. Moreover, while not an extensive array of non-GAN data augmentation methods were explored, the GAN/WGAN results above showed that time could potentially be saved from gridsearching as well as searching for the method that augments data well.
 
 Since every dataset is unique, so will the sampling methods likely be changed. Instead of researching for the right classical approach all over, GANs reduce this search effort by primarily learning the distribution of the data and generate samples out of it without incurring the possibility of combinatorial explosion (when gridsearching) or misrepresenting the real minority class(es) feature distributions/scatter patterns during the sampling process. When considering a GAN architecture, the WGAN is the better choice among the two GAN systems explored here for its faster convergence to the global optimum while less susceptible to mode collapsing.
 
