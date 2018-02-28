@@ -713,7 +713,7 @@ Clearly some form of distinction between fraud and non-fraud data exits. However
 
 Based on the distribution graphs above, it appears that for certain features, the distribution of fraudulent cases are different from non-fraudulent cases. However, the differences are difficult to make definitive judgements based on visual inspection.
 
-For the sake of reaching a robust conclusion (on which features are important to distinguish normal transactions from fradulent ones), we will perform equality of distribution tests. In this case, the Wilcoxon Rank-Sum Test is chosen here since outliers were found in the data. This will be used to check for equality of the distributions of each feature, between fraud and non-fraud cases.
+For the sake of reaching a robust conclusion (on which features are important to distinguish normal transactions from fraudulent ones), we will perform equality of distribution tests. In this case, the Wilcoxon Rank-Sum Test is chosen here since outliers were found in the data. This will be used to check for equality of the distributions of each feature, between fraud and non-fraud cases.
 
     
      Wilcoxon Rank-Sum Relevant Features:  ['V1', 'V2', 'V3', 'V4', 'V5', 'V6', 'V7', 'V8', 'V9', 'V10',
