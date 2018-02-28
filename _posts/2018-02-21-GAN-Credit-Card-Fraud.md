@@ -1251,7 +1251,7 @@ It appears that the discriminator stabilises around the 1665th epoch while the g
     
     
 
-With the results from augmenting data created by WGANs, the steady unstandardised WGAN yield a cost range between 0.33-0.51% while at the final unstandardised epoch, this cost ranges between 0.29-0.44%. Replicating this motif in the vanilla GAN unstandardised models, the steady and final epoch cost ranges are between 0.32-0.49% and 0.31-0.48%.
+With the results from augmenting data created by WGANs, the steady unstandardized WGAN yield a cost range between 0.33-0.51% while at the final unstandardized epoch, this cost ranges between 0.29-0.44%. Replicating this motif in the vanilla GAN unstandardized models, the steady and final epoch cost ranges are between 0.32-0.49% and 0.31-0.48%.
 
 Through these, results suggest that the classical GAN models possibly require more training epochs before reaching the optimum. Comparing against WGAN, the results substantially improves from the steady to the final epoch by the time the final training epoch is ran. In addition, the precision of WGAN augmented data models appear to be higher than GAN models where the lowest recorded precision for WGAN was at 0.14 while 0.04 in GAN. This serves as an additional piece of evidence suggesting that WGAN would generally be a better architecture over its predecessor.
 
