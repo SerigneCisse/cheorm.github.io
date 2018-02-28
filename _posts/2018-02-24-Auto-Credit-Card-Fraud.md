@@ -815,7 +815,7 @@ Since there was no convergence to 0 losses across epochs, the epoch with the min
     Fraud Steady Epoch: 1207
     
 
-Retrieving generated data from the relevant epochs, the dataset was next augmented to train the classifer (stochastic gradient descent classifer of 'scikit-learn' was implemented across all models). Classification results are shown below.
+Retrieving generated data from the relevant epochs, the dataset was next augmented to train the classifier (stochastic gradient descent classifier of 'scikit-learn' was implemented across all models). Classification results are shown below.
 
     
      ############################################# LOWEST MSE #############################################
