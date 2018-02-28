@@ -692,7 +692,7 @@ A PCA plot was implemented to observe for the differences between fraudulent and
 <img src="https://cheorm.github.io/accompanying_blog_notes/Auto-Credit-Card-Fraud/output_18_1.png" width="100%" height="100%" />
 
 
-Clealy some form of distinction between fraud and non-fraud data exits. However, since the fraud data is a subset of the non-frauds (i.e. fraudulent clusters within the area of the non-fraud clusters), it will not be unexpected to find the precision of identifying fraud data to be exceptionally poor when maximising recall.
+Clearly some form of distinction between fraud and non-fraud data exits. However, since the fraud data is a subset of the non-frauds (i.e. fraudulent clusters within the area of the non-fraud clusters), it will not be unexpected to find the precision of identifying fraud data to be exceptionally poor when maximising recall.
 
 
 ```python
