@@ -28,7 +28,7 @@ It may be thought that 'Amount' should also be removed since fraudulent transact
 
 
 ```python
-### Overview of data in 'credit' ###
+# Overview of data in 'credit'
 ```
 
 
