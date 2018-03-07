@@ -34,22 +34,7 @@ The dataset was train-test split into 75-25. All models trained on these 75% of 
 
 ```python
 ### Load credit card data and preprocessing ###
-
-# Import 'creditcard.csv'
-credit_csv_dir = 'creditcard.csv'
-credit = pd.read_csv(credit_csv_dir)
-
-# Convert data into 'mini-batchable' numpy NORMAL arrays, drop 'Time'
-credit_X = credit.drop(labels=['Time','Class'], axis='columns')
-credit_y = credit['Class'].as_matrix()
-
-# Train-test split data: 75/25
-X_train, X_test, y_train, y_test = train_test_split(credit_X, credit_y, test_size=0.25, random_state=seed)
-
-credit.head()
 ```
-
-
 
 
 <div style="overflow-x:auto;">
@@ -279,14 +264,9 @@ credit.head()
 </div>
 
 
-
-
 ```python
 # Descriptive statistics
-credit.describe(include='all')
 ```
-
-
 
 
 <div style="overflow-x:auto;">
@@ -628,7 +608,6 @@ In addition, the number of frauds in the dataset is only a **mere 0.172% out of 
 
 ```python
 # Compute number of fraud and non-fraud classes
-print(credit['Class'].value_counts(), '\n')
 ```
 
     0    284315
@@ -636,7 +615,6 @@ print(credit['Class'].value_counts(), '\n')
     Name: Class, dtype: int64 
     
     
-
 It seems there are only 492 fraudulent transactions! It is highly probable that the classifier would fail to learn how to identify frauds since there are only so few data points available to observe for differences from normal transactions.
 
 The total amount of fraudulent transactions was next computed for the purpose of cost computations of model implementation later. In total, the monetary transactions in frauds summed to \$42,513.46 and \$17,614.51 in the training and test sets respectively. Therefore, this figure totals to \$102,032.30 for the entire dataset.
@@ -656,8 +634,6 @@ A PCA plot was first plotted to observe for an aggregated pattern about the trai
 
 ```python
 # Percentage of variance explained for each components
-print('explained variance ratio (first two components): %s'
-      % str(pca.explained_variance_ratio_))
 ```
 
     explained variance ratio (first two components): [ 0.12503723  0.10004168]
@@ -674,22 +650,7 @@ The distributions of fraud and benign transactions were next plotted to identify
 
 
 ```python
-# Kernel Density Distribution subplots against target - 'Class'
-
-# Scatter subplots
-plt.figure(figsize=(20,18))
-for plot, feat in enumerate(X_cols):
-    
-    plt.subplot(5, 6, (plot+1))
-    title = 'Fraud/Non-Fraud & ' + feat
-    
-    # Normalise to visualise the differences in distributions
-    temp_df = pd.concat([X_train_df[[feat]], y_train_df], axis='columns')
-    temp_df.groupby(by='Class')[feat].plot(kind='kde', alpha=0.7, legend='best', lw=2.5)
-    plt.title(title)
-    plt.tight_layout(); plt.margins(0.02)
-    
-plt.show()    
+# Kernel Density Distribution subplots against target - 'Class'   
 ```
 
 
@@ -703,9 +664,6 @@ In this case, the Wilcoxon Rank-Sum Test was chosen since outliers were found in
 
 ```python
 # Rank-Sum Test determined differences in classes within feature
-wilcox_feat = [feat for feat in wilcox_result.keys() if wilcox_result[feat][0] == 'Diff']
-print('\n', 'Wilcoxon Rank-Sum Relevant Features: ', wilcox_feat)
-print('Total number of features selected: {}'.format(len(wilcox_feat)))
 ```
 
     Feature "V13" failed to be rejected at 5% level with p-value 0.0973465482
@@ -889,8 +847,7 @@ Computing the costs, the baseline model incurs costs between 1.09-2.03% as a per
 
 
 ```python
-# Print best parameters used in 'GridSearchCV'
-print(sgd_gridsearch.best_params_)
+# Best parameters used in 'GridSearchCV'
 ```
 
     {'alpha': 316.26417517967889, 'class_weight': 'balanced', 'eta0': 0.0001, 'l1_ratio': 0.0001, 
