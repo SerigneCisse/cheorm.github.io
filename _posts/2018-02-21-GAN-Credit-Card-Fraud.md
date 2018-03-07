@@ -33,7 +33,7 @@ The dataset was train-test split into 75-25. All models trained on these 75% of 
 
 
 ```python
-### Load credit card data and preprocessing ###
+# Load credit card data and preprocessing
 ```
 
 
