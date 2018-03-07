@@ -29,14 +29,6 @@ It may be thought that 'Amount' should also be removed since fraudulent transact
 
 ```python
 ### Overview of data in 'credit' ###
-
-pd.set_option('display.max_columns', 1000)
-pd.set_option('display.max_rows', 1000)
-pd.set_option('max_info_columns', 1000)
-pd.set_option('max_info_rows', 1000)
-
-# 1st 5 rows
-credit.head()
 ```
 
 
@@ -271,7 +263,6 @@ credit.head()
 
 ```python
 # Dtype; checking for nulls
-credit.info(null_counts=True)
 ```
 
     <class 'pandas.core.frame.DataFrame'>
@@ -314,7 +305,6 @@ credit.info(null_counts=True)
 
 ```python
 # Descriptive statistics
-credit.describe(include='all')
 ```
 
 
@@ -649,7 +639,6 @@ credit.describe(include='all')
 
 ```python
 # Validate only fraud and non-fraud classes
-credit['Class'].value_counts()
 ```
 
 
