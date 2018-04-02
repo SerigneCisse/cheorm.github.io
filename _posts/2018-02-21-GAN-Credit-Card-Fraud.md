@@ -958,7 +958,7 @@ _Garbage In, Garbage Out..._
 
 #### General conclusions about random oversampling & SMOTE
 
-It may be argued that minimal efforts were put into gridsearching for the optimal parameters. However, notice that the SMOTE-TL took approximately 1 minute. Even earlier, the gridsearched baseline required almost half an hour of gridsearching for that few hyperparameter options specified. Had gridsearch been implemented into the sampling and classification process, the amount of time taken to produce results potentially scales. With more hyperparameters to search for, the likelihood of encountering a combinatorial explosion!
+It may be argued that minimal efforts were put into gridsearching for the optimal parameters. However, notice that the SMOTE-TL took approximately 1 minute. Even earlier, the gridsearched baseline required almost half an hour of gridsearching for that few hyperparameter options specified. Had gridsearch been implemented into the sampling and classification process, the amount of time taken to produce results potentially scales. With more hyperparameters to search for, the higher the likelihood of encountering a combinatorial explosion!
 
 Moreover, gridsearching is akin to brute forcing out optimal hyperparameter values. In this case, it is not unreasonable to postulate that the classifier would have been overfitted to the test set as well. When unseen fraudulent transactions arrive, the classification models may be incapable of identifying them at all. 
 
